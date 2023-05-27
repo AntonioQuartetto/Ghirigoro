@@ -31,11 +31,17 @@
     </div>
 
 
-  <div class="section-custom">
+  <div class="section-custom text-center">
   
-    @if (session('success')) 
-        {{session('success')}}
-    @endif
+
+    <div class="my-3">
+    <h3>Lista Libri</h3>
+    </div>
+        @if (session('success')) 
+            <span class="badge text-bg-danger">
+                 {{session('success')}}
+            </span>
+         @endif
 
     <ul>
     
