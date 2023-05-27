@@ -1,0 +1,24 @@
+
+/*--- BODY CUSTOM ---*/
+
+.body-custom{
+    background-image: url('/storage/app/public/images/background-images/library-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 1000px;
+    background-attachment: fixed;
+}
+
+
+/*--- NAVBAR-CUSTOM ---*/
+
+.navbar-dark{
+    font-family:'Times New Roman', Times, serif;
+}
+
+/*--- INPUT CUSTOM ---*/
+.input-custom{
+    border-radius: 5px;
+
+
+}
