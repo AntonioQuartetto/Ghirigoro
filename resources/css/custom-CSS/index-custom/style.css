@@ -1,0 +1,26 @@
+
+
+.section-custom{
+   background-color: rgba(249, 249, 249, 0.216);
+   color: rgb(255, 255, 255);
+   padding: 20px;
+   border-radius: 20px;
+   box-shadow: rgb(0, 0, 0) -1px 1px 5px 1px;
+   
+}
+
+.section-custom, ul, li{
+    margin: 10px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.btn-list{
+    text-decoration: none;
+    background-color: rgb(53, 0, 67);
+    color: wheat;
+    padding: 10px;
+    border-radius: 10px;
+}
+.btn-list:hover{
+    box-shadow: rgb(0, 11, 108) -1px 1px 5px 1px;
+}

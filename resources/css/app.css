@@ -1,2 +1,4 @@
 @import 'bootstrap';
-@import './custom-CSS/style.css'
+@import './custom-CSS/main-custom/style.css';
+@import './custom-CSS/index-custom/style.css';
+@import './custom-CSS/create-custom/style.css';

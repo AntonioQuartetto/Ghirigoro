@@ -14,6 +14,14 @@
     <!-- navbar -->
     <x-navbar />
 
+    <!-- header-logo -->
+    
+    <div class="header-custom">
+    <img src="{{Storage::url('/images/logo/header-logo.png')}}">
+    </div>
+
+
+
     <!-- contenuto pagina -->
     <main class="container my-5">
 
