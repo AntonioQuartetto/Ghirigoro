@@ -27,13 +27,3 @@
 </div>
 
 </x-main>
-
-
-{{-- 
-<img src="{{Storage::url($book->image)}}">
-  <ul>
-   <li><b>Titolo: </b>{{$book->title}}</li>
-   <li><b>Autore: </b>{{$book->author}} </li>
-   <li><b>Num.Pagine: </b>{{$book->pages}}</li>
-   <li><b>Anno: </b>{{$book->year}} </li>
-   </ul> --}}
