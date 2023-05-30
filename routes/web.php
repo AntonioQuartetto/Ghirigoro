@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,8 +24,8 @@ Route::get('/libri/{book}/dettagli', [BookController::class, 'show'])->name('boo
 
 /*-- Categories Routes --- */
 
-Route::get('/categorie', [BookController::class, 'index'])->name('category.index');
-Route::get('/categorie/crea', [BookController::class, 'create'])->name('category.create');
-Route::post('/categorie/salva', [BookController::class, 'store'])->name('category.store');
-Route::get('/categorie/{cat}/dettagli', [BookController::class, 'show'])->name('category.show');
+Route::get('/categorie', [CategoryController::class, 'index'])->name('category.index');
+Route::get('/categorie/crea', [CategoryController::class, 'create'])->name('category.create');
+Route::post('/categorie/salva', [CategoryController::class, 'store'])->name('category.store');
+Route::get('/categorie/{cat}/dettagli', [CategoryController::class, 'show'])->name('category.show');
 

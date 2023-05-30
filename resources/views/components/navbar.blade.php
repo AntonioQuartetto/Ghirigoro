@@ -13,7 +13,13 @@
             <a class="nav-link mx-2 @if (Route::currentRouteName() == 'book.index') active @endif" aria-current="page" href="{{route('book.index')}}">Home</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link mx-2 @if (Route::currentRouteName() == 'category.index') active @endif" aria-current="page" href="{{route('category.index')}}">Categorie</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link @if (Route::currentRouteName() == 'book.create') active @endif" href="{{route('book.create')}}">Add Book</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link @if (Route::currentRouteName() == 'category.create') active @endif" href="{{route('category.create')}}">Add Category</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
