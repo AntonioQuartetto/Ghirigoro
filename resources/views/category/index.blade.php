@@ -1,7 +1,7 @@
 
 <x-main>
 
-<x-slot name="title">Categorie</x-slot>
+    <x-slot name="title">Categorie</x-slot>
 
 
 
@@ -19,26 +19,25 @@
             </span>
          @endif
 
-        <div>
-
+       
             <ul>
-            
-            @foreach ($categories as $category)
+                
+                @foreach ($categories as $category)
 
-                <li class="list-group-item d-flex justify-content-between ">
-                    <div>
-                        <b>Categoria: </b>{{$category->name}}
-                    </div>
-                    <span>
-                        <a href="{{route('category.show', ['cat' => $category])}}">Info</a>
-                    </span>
-                </li>
-        
-            @endforeach
+                    <li class="p-1 list-group-item d-flex justify-content-between">
+                        <div>
+                            <b>Categoria: </b>{{$category->name}}
+                        </div>
+                        <span>
+                            <a href="{{route('category.show', ['cat' => $category])}}" class="btn-list">Info</a>
+                        </span>
+                    </li>
             
+                @endforeach
+                
             </ul>
         
-        </div>
+       
 
 
     

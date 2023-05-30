@@ -38,8 +38,6 @@ class CategoryController extends Controller
             abort(404);
         }
         
-            
-            
 
         return view('category.show', ['category' => $categoria]);
     }

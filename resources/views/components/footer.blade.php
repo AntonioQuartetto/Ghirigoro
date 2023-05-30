@@ -2,15 +2,15 @@
 
 
 
-<footer class="row align-items-center g-0  px-3 text-white">
-            <!-- Desc -->
+<footer class="row align-items-center g-0  px-3 text-white fixed-bottom">
+    
     <div class="col-lg-4 col-md-5 col-12">
-                <span>© 
-                    <span id="copyright2">
-                        2023
-                    </span>
-                    AQ, Inc. All Rights Reserved   
-                </span>
+        <span>© 
+            <span id="copyright2">
+                2023
+            </span>
+            AQ, Inc. All Rights Reserved   
+        </span>
     </div>
 
             
@@ -21,4 +21,5 @@
          <a class="nav-link" href="#">Terms of Use</a>
                 
     </div>
+
 </footer>
