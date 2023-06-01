@@ -23,9 +23,9 @@
 
 
     <!-- contenuto pagina -->
-    <main class="container my-5">
+    <main class="container my-5 min-vh-100">
 
-    {{$slot}}
+        {{$slot}}
 
     </main>
 

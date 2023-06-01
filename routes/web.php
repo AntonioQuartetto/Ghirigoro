@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*-- Homepage -- */
+Route::get('/', [BookController::class, 'homepage'])->name('homepage');
+
 /*-- Book Routes ---*/ 
+
 Route::get('/libri', [BookController::class, 'index'])->name('book.index');
 Route::get('/libri/crea', [BookController::class, 'create'])->name('book.create');
 Route::post('/libri/salva', [BookController::class, 'store'])->name('book.store');
@@ -28,4 +32,8 @@ Route::get('/categorie', [CategoryController::class, 'index'])->name('category.i
 Route::get('/categorie/crea', [CategoryController::class, 'create'])->name('category.create');
 Route::post('/categorie/salva', [CategoryController::class, 'store'])->name('category.store');
 Route::get('/categorie/{cat}/dettagli', [CategoryController::class, 'show'])->name('category.show');
+
+
+
+
 
