@@ -36,38 +36,67 @@
               
               <!-- Title Input -->
               <div class="col-6  mb-3">
-                <label class="form-label"><b>Titolo:</b></label>
-                <input class="input-custom" type="text" name="title" value="{{ old('title') }}" placeholder="Titolo"/>  
-                <span class="text-danger">
+                <b><span class="text-danger">
             
                   @error('title')
-                    {{$message}}
+                    *
                   @enderror
 
-                </span>         
+                </span></b> 
+                <label class="form-label"><b>Titolo:</b></label>
+                <input class="input-custom" type="text" name="title" value="{{ old('title') }}" placeholder="Titolo"/>  
+                        
               </div>
             
               
               <!-- Pages Input -->
               <div class="col-6 mb-3">
+              <b><span class="text-danger">
+            
+                  @error('pages')
+                    *
+                  @enderror
+
+                </span></b>
                 <label class="form-label"><b>Pagine:</b></label>
                 <input class="input-custom" type="text" name="pages" value="{{ old('pages') }}" placeholder="Pagine"/>
               </div>
 
               <!-- Author Input -->
               <div class="col-6 mb-3">
+              <b><span class="text-danger">
+            
+                  @error('author')
+                    *
+                  @enderror
+
+                </span></b>
               <label class="form-label"><b>Autore:</b></label>
                 <input class="input-custom" type="text" name="author" value="{{ old('author') }}" placeholder="Autore"/> 
               </div>
 
               <!-- Year Input -->
               <div class="col-6 mb-3">
+              <b><span class="text-danger">
+            
+                  @error('year')
+                    *
+                  @enderror
+
+                </span></b>
                 <label class="form-label"><b>Anno:</b></label>
                 <input class="input-custom" type="text" name="year" value="{{ old('year') }}" placeholder="Anno"/> 
               </div>
 
                 <!-- File Input -->
               <div class="col-6 mb-3">
+              <b><span class="text-danger">
+            
+                  @error('image')
+                    *
+                  @enderror
+
+                </span></b>
                 <label class="form-lable"><b>Immagine Del Libro:</b></label>
                 <input class="input-custom" type="file" name="image"/> 
               </div>

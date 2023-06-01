@@ -30,9 +30,10 @@
                 <input type="text" name="name" id="name" class="form-control">
                 <label class="form-label" for="name">Nome e Cognome</label>
                 <div class="form-notch"><div class="form-notch-leading"></div><div class="form-notch-middle"></div><div class="form-notch-trailing"></div></div></div>
+                @error('name') <span class="small text-danger">{{ $message }}</span> @enderror
             </div>
 
-            @error('name') <span class="small text-danger">{{ $message }}</span> @enderror
+            
 
             {{-- Input Email --}}
             <div class="d-flex flex-row align-items-center mb-4">
@@ -40,8 +41,9 @@
                 <input type="email" name="email" id="email" class="form-control">
                 <label class="form-label" for="form3Example3c">Email</label>
                 <div class="form-notch"><div class="form-notch-leading"></div><div class="form-notch-middle"></div><div class="form-notch-trailing"></div></div></div>
+                @error('email') <span class="small text-danger">{{ $message }}</span> @enderror
             </div>
-            @error('email') <span class="small text-danger">{{ $message }}</span> @enderror
+            
             
             {{-- Input Password --}}
             <div class="d-flex flex-row align-items-center mb-4">
@@ -49,8 +51,9 @@
                 <input type="password" name="password" id="password" class="form-control">
                 <label class="form-label" for="password">Password</label>
                 <div class="form-notch"><div class="form-notch-leading"></div><div class="form-notch-middle"></div><div class="form-notch-trailing"></div></div></div>
+                @error('password') <span class="small text-danger">{{ $message }}</span> @enderror
             </div>
-            @error('password') <span class="small text-danger">{{ $message }}</span> @enderror
+            
 
             {{-- Input Password Confirmation --}}
             <div class="d-flex flex-row align-items-center mb-4">
@@ -58,8 +61,9 @@
                 <input type="password" name="password_confirmation" id="password-confirmation" class="form-control">
                 <label class="form-label" for="password_confimation">Conferma la Password</label>
                 <div class="form-notch"><div class="form-notch-leading"></div><div class="form-notch-middle"></div><div class="form-notch-trailing"></div></div></div>
+                @error('password_confimation') <span class="small text-danger">{{ $message }}</span> @enderror
             </div>
-            @error('password_confimation') <span class="small text-danger">{{ $message }}</span> @enderror
+            
 
             <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                 <button type="submit" class="btn-user px-5 py-1" style="">Registrati</button>
