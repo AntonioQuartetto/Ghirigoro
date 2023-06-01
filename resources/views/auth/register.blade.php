@@ -62,7 +62,7 @@
             @error('password_confimation') <span class="small text-danger">{{ $message }}</span> @enderror
 
             <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                <button type="submit" class="btn btn-primary btn-lg" style="">Registrati</button>
+                <button type="submit" class="btn-user px-5 py-1" style="">Registrati</button>
             </div>
 
             </form>
