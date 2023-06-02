@@ -13,33 +13,31 @@
         
         </div>
 
-          @if (session('success')) 
+        @if (session('success')) 
             <span class="badge text-bg-danger">
                  {{session('success')}}
             </span>
-         @endif
+        @endif
 
        
-            <ul>
-                
-                @foreach ($categories as $category)
-
-                    <li class="p-1 list-group-item d-flex justify-content-between">
-                        <div>
-                            <b>Categoria: </b>{{$category->name}}
-                        </div>
-                        <span>
-                            <a href="{{route('category.show', ['cat' => $category])}}" class="btn-list">Info</a>
-                        </span>
-                    </li>
+        <ul>
             
-                @endforeach
-                
-            </ul>
+            @foreach ($categories as $category)
+
+                <li class="p-1 list-group-item d-flex justify-content-between">
+                    <div>
+                        <b>Categoria: </b>{{$category->name}}
+                    </div>
+                    <span>
+                        <a href="{{route('category.show', ['cat' => $category])}}" class="btn-list">Info</a>
+                    </span>
+                </li>
         
+            @endforeach
+            
+        </ul>
+    
        
-
-
     
     </div>
 
