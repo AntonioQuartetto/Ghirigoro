@@ -58,7 +58,7 @@
             {{-- Input Password Confirmation --}}
             <div class="d-flex flex-row align-items-center mb-4">
                 <div class="form-outline flex-fill mb-0">
-                <input type="password" name="password_confirmation" id="password-confirmation" class="form-control">
+                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
                 <label class="form-label" for="password_confimation">Conferma la Password</label>
                 <div class="form-notch"><div class="form-notch-leading"></div><div class="form-notch-middle"></div><div class="form-notch-trailing"></div></div></div>
                 @error('password_confimation') <span class="small text-danger">{{ $message }}</span> @enderror
