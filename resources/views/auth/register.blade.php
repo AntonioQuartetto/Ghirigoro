@@ -69,6 +69,11 @@
                 <button type="submit" class="btn-user px-5 py-1" style="">Registrati</button>
             </div>
 
+            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                <p>Sei già registrato?</p>
+                <a href="{{route('login')}}" class="btn-user px-5 py-1" style="">Accedi</a>
+            </div>
+
             </form>
 
         </div>
