@@ -59,15 +59,15 @@ class BookController extends Controller
         return redirect()->route('book.index')->with('success', 'Libro aggiunto con successo');
         
     }
-    public function show($book){
+    public function show(Book $book){
         
         
-        $book = Book::find($book);
-        if(!$book){
-            abort(404);
-        }
+        // $book = Book::find($book);
+        // if(!$book){
+        //     abort(404);
+        // }
         
-        return view('book.show', ['book' => $book]);
+        return view('book.show', compact('book'));
         
     }
     
