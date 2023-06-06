@@ -26,7 +26,7 @@ class BookRequest extends FormRequest
             'pages' => 'required|integer',
             'author' => 'required|string',
             'year' => 'required|integer',
-            'image' => "required|mimes:png,jpg"
+            'image' => "mimes:png,jpg"
         ];
     }
     public function messages(){
@@ -40,7 +40,6 @@ class BookRequest extends FormRequest
             'author.string' => 'Consentite solo lettere',
             'year.required' => 'Anno obbligatorio',
             'year.integer' => 'Consentiti solo numeri',
-            'image.required' => 'Immagine Obbligatoria',
             'image.mimes' => 'Consentiti solo questi formati'
         ];
     }

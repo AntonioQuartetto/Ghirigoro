@@ -28,9 +28,23 @@
                     <div>
                         <b>Titolo: </b>{{$book->title}}
                     </div>
+                   <div>
                     <span>
-                        <a href="{{route('books.show', ['book' => $book])}}" type="button" class="btn-list">Info</a>
+                        <a href="{{route('books.show', ['book' => $book])}}" type="button" class="btn-list">Dettagli</a>
                     </span>
+                    <span>
+                        <a href="{{route('books.edit', ['book' => $book->id])}}" type="button" class="btn-list">Modifica</a>
+                    </span>
+                    <span>
+                        <form action="{{route('books.delete', ['book' => $book->id])}}" method="POST">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="btn-list">Elimina</button>
+                        </form>
+
+                        {{-- <a href="#" type="button" class="btn-list">Cancella</a> --}}
+                    </span>
+                   </div>
                 </li>
                     
                 @endforeach

@@ -7,13 +7,13 @@
 <div class="my-5 text-white">
 
     <div class="text-center">
-      <h2>Dettagli</h2>
+      <h2 class="my-5">Dettagli</h2>
     </div>
   
   <div class="row">
 
     <div class="col-12 col-sm-6">
-      <img src="{{empty($book->image) ? Storage::url('/images/placeholder/placeholder-book.png') : Storage::url($book->image)}}" alt="{{$book->name}}">
+      <img class="w-75" src="{{empty($book->image) ? Storage::url('/images/placeholder/placeholder-book.png') : Storage::url($book->image)}}" alt="{{$book->name}}">
     </div>
     
     <div class="col-12 col-sm-6">
