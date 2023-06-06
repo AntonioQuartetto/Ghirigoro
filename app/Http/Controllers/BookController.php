@@ -11,7 +11,7 @@ class BookController extends Controller
 
 
     public function __construct(){
-        $this->middleware('auth')->except('homepage','index');
+        $this->middleware('auth')->except('homepage','index', 'show');
     }
 
     public function homepage(){

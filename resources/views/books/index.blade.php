@@ -11,6 +11,7 @@
         <div class="my-3 text-center">
 
             <h3>Lista Libri</h3>
+            <span> <a class="btn btn-success" href="{{route('books.create')}}">Add Book</a></span>
 
         </div>
 
@@ -32,18 +33,28 @@
                     <span>
                         <a href="{{route('books.show', ['book' => $book])}}" type="button" class="btn-list">Dettagli</a>
                     </span>
+
+
+
+                    @auth
                     <span>
                         <a href="{{route('books.edit', ['book' => $book->id])}}" type="button" class="btn-list">Modifica</a>
                     </span>
                     <span>
-                        <form action="{{route('books.delete', ['book' => $book->id])}}" method="POST">
+
+                        <a class="btn-list" onclick="event.preventDefault(); document.querySelector('#form-delete-{{$book->id}}').submit();">Elimina</a>
+                        <form class="d-none" id="form-delete-{{$book->id}}" action="{{route('books.delete', ['book' => $book->id])}}" method="POST">
                         @method('DELETE')
                         @csrf
-                        <button type="submit" class="btn-list">Elimina</button>
                         </form>
 
-                        {{-- <a href="#" type="button" class="btn-list">Cancella</a> --}}
                     </span>
+
+                    @endauth
+
+
+
+
                    </div>
                 </li>
                     
@@ -53,5 +64,5 @@
 
   </div>
 
-    
+
 </x-main>

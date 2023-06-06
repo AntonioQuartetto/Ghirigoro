@@ -10,6 +10,7 @@
         <div class="my-3 text-center">
         
             <h2>Lista Categorie</h2>
+            <span> <a class="btn btn-success" href="{{route('category.create')}}">Add Category</a></span>
         
         </div>
 
