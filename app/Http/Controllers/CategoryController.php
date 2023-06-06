@@ -10,6 +10,12 @@ class CategoryController extends Controller
 {
     
 
+
+    public function __construct(){
+        $this->middleware('auth')->except('homepage','index', 'show');
+    }
+
+
     public function index(){
 
         $categoria = Category::all(); 
@@ -32,14 +38,36 @@ class CategoryController extends Controller
     
     }
 
-    public function show($cat){
+    public function show($category){
         
-        $categoria = Category::find($cat);
-        if(!$cat){
+        $categoria = Category::find($category);
+        if(!$category){
             abort(404);
         }
         
 
         return view('category.show', ['category' => $categoria]);
     }
+
+    public function edit(Category $category){
+
+        return view('category.edit', compact('category'));
+    }
+
+    public function update(CategoryRequest $request, Category $category){
+
+
+        $category->update([
+            'name' => $request->name,
+            
+        ]);
+        
+        return redirect()->route('category.index')->with('success', 'Modifica avvenuta con successo');
+    }
+     public function destroy(Category $category){
+
+        $category->delete();
+
+        return redirect()->route('category.index')->with('success', 'Categoria eliminata con successo');
+     }
 }

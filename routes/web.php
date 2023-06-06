@@ -33,7 +33,10 @@ Route::delete('/libri/{book}', [BookController::class, 'destroy'])->name('books.
 Route::get('/categorie', [CategoryController::class, 'index'])->name('category.index');
 Route::get('/categorie/crea', [CategoryController::class, 'create'])->name('category.create');
 Route::post('/categorie/salva', [CategoryController::class, 'store'])->name('category.store');
-Route::get('/categorie/{cat}/dettagli', [CategoryController::class, 'show'])->name('category.show');
+Route::get('/categorie/{category}/dettagli', [CategoryController::class, 'show'])->name('category.show');
+Route::get('/categorie/{category}/modifica', [CategoryController::class, 'edit'])->name('category.edit');
+Route::put('/categorie/{category}', [CategoryController::class, 'update'])->name('category.update');
+Route::delete('/categorie/{category}', [CategoryController::class, 'destroy'])->name('category.delete');
 
 
 

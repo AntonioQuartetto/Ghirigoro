@@ -7,7 +7,7 @@
     <div class="text-center">
     
         <h2>Dettagli categoria</h2>
-        @dd($category)
+        {{$category->name}}
     
     </div>
 
