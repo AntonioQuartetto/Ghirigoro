@@ -15,7 +15,7 @@
               
             </div>
 
-            <form action="{{route('book.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('books.store')}}" method="POST" enctype="multipart/form-data">
 
                   @method('POST')
                   @csrf

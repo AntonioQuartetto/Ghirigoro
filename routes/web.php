@@ -20,10 +20,10 @@ Route::get('/', [BookController::class, 'homepage'])->name('homepage');
 
 /*-- Book Routes ---*/ 
 
-Route::get('/libri', [BookController::class, 'index'])->name('book.index');
-Route::get('/libri/crea', [BookController::class, 'create'])->name('book.create');
-Route::post('/libri/salva', [BookController::class, 'store'])->name('book.store');
-Route::get('/libri/{book}/dettagli', [BookController::class, 'show'])->name('book.show');
+Route::get('/libri', [BookController::class, 'index'])->name('books.index');
+Route::get('/libri/crea', [BookController::class, 'create'])->name('books.create');
+Route::post('/libri/salva', [BookController::class, 'store'])->name('books.store');
+Route::get('/libri/{book}/dettagli', [BookController::class, 'show'])->name('books.show');
 
 
 /*-- Categories Routes --- */

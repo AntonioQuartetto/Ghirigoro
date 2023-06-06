@@ -29,7 +29,7 @@
                         <b>Titolo: </b>{{$book->title}}
                     </div>
                     <span>
-                        <a href="{{route('book.show', ['book' => $book])}}" type="button" class="btn-list">Info</a>
+                        <a href="{{route('books.show', ['book' => $book])}}" type="button" class="btn-list">Info</a>
                     </span>
                 </li>
                     

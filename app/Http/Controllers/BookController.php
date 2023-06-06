@@ -23,12 +23,12 @@ class BookController extends Controller
         
         $books = Book::all();
         
-        return view('book.index', ['books' => $books]);
+        return view('books.index', ['books' => $books]);
         
     }
     
     public function create(){
-        return view('book.create');
+        return view('books.create');
     }
     
     
@@ -56,18 +56,12 @@ class BookController extends Controller
             'image' => $path_image
         ]);
         
-        return redirect()->route('book.index')->with('success', 'Libro aggiunto con successo');
+        return redirect()->route('books.index')->with('success', 'Libro aggiunto con successo');
         
     }
     public function show(Book $book){
         
-        
-        // $book = Book::find($book);
-        // if(!$book){
-        //     abort(404);
-        // }
-        
-        return view('book.show', compact('book'));
+        return view('books.show', compact('book'));
         
     }
     
