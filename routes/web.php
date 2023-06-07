@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +38,11 @@ Route::get('/categorie/{category}/dettagli', [CategoryController::class, 'show']
 Route::get('/categorie/{category}/modifica', [CategoryController::class, 'edit'])->name('category.edit');
 Route::put('/categorie/{category}', [CategoryController::class, 'update'])->name('category.update');
 Route::delete('/categorie/{category}', [CategoryController::class, 'destroy'])->name('category.delete');
+
+
+/*-- Authors Routes --*/
+
+Route::resource('autori', AuthorController::class);
 
 
 
