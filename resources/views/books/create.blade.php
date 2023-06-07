@@ -101,9 +101,9 @@
                 <input class="input-custom" type="file" name="image"/> 
               </div>
 
-              <!-- Submit button -->
+              <!-- Add button -->
               <div class="d-grid">
-                <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button>
+                <button class="btn-user py-3" id="submitButton" type="submit">Aggiungi Libro</button>
               </div>
             </form>
       

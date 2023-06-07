@@ -42,7 +42,7 @@
                     <span>
 
                         <a class="btn-list" onclick="event.preventDefault(); document.querySelector('#form-delete-{{$category->id}}').submit();">Elimina</a>
-                        <form class="d-none" id="form-delete-{{$category->id}}" action="{{route('category.delete', ['category' => $category->id])}}" method="POST">
+                        <form class="d-none" id="form-delete-{{$category->id}}" action="{{route('category.destroy', ['category' => $category->id])}}" method="POST">
                         @method('DELETE')
                         @csrf
                         </form>

@@ -51,7 +51,7 @@
 
             <!-- Submit button -->
             <div class="d-grid">
-              <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Aggiungi</button>
+              <button class="btn-user py-3" id="submitButton" type="submit">Aggiungi Categoria</button>
             </div>
           </form>
      
