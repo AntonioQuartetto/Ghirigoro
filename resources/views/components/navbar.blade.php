@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark p-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{route('homepage')}}">
+      <a class="navbar-brand text-warning" href="{{route('homepage')}}">
       <img class ="px-3" src="{{Storage::url('/images/logo/hogwarts-logo.png')}}" alt="Logo">
       Ghirigoro</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
