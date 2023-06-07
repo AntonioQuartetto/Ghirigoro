@@ -13,7 +13,10 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        return view('authors.index');
+
+        $authors = Author::all();
+
+        return view('authors.index', compact('authors'));
     }
 
     /**
@@ -21,7 +24,8 @@ class AuthorController extends Controller
      */
     public function create()
     {
-        //
+        
+        return view('authors.create');
     }
 
     /**
@@ -29,7 +33,13 @@ class AuthorController extends Controller
      */
     public function store(StoreAuthorRequest $request)
     {
-        //
+        Author::create([
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'birthday' => $request->birthday
+        ]);
+
+        return redirect()->route('authors.index')->with('success', 'Autore aggiunto con successo');
     }
 
     /**

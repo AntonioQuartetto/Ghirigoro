@@ -5,18 +5,13 @@
 <x-slot name="title">Autori</x-slot>
 
 
-<h1 class="text-white">Index Autori</h1>
-
-
-
-
 
   <div class="section-custom">
   
 
         <div class="my-3 text-center">
 
-            <h3>Lista Libri</h3>
+            <h3>Lista Autori</h3>
             <span> <a class="btn btn-success" href="{{route('authors.create')}}">Add Author</a></span>
 
         </div>
@@ -49,7 +44,7 @@
                     <span>
 
                         <a class="btn-list" onclick="event.preventDefault(); document.querySelector('#form-delete-{{$author->id}}').submit();">Elimina</a>
-                        <form class="d-none" id="form-delete-{{$author->id}}" action="{{route('authors.delete', ['book' => $author->id])}}" method="POST">
+                        <form class="d-none" id="form-delete-{{$author->id}}" action="{{route('authors.destroy', ['author' => $author->id])}}" method="POST">
                         @method('DELETE')
                         @csrf
                         </form>
