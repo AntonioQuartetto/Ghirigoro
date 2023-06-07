@@ -42,7 +42,7 @@ Route::delete('/categorie/{category}', [CategoryController::class, 'destroy'])->
 
 /*-- Authors Routes --*/
 
-Route::resource('autori', AuthorController::class);
+Route::resource('authors', AuthorController::class);
 
 
 

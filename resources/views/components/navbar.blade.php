@@ -21,6 +21,9 @@
           <li class="nav-item">
             <a class="nav-link mx-2 @if (Route::currentRouteName() == 'category.index') active @endif" aria-current="page" href="{{route('category.index')}}">Categorie</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 @if (Route::currentRouteName() == 'authors.index') active @endif" aria-current="page" href="{{route('authors.index')}}">Autori</a>
+          </li>
 
  
           @auth
