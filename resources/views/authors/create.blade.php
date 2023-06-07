@@ -40,7 +40,7 @@
               <span class="text-danger">
            
                 @error('name')
-                  {{$message}}
+                 <b>*</b>
                 @enderror
 
               </span>         
@@ -53,7 +53,7 @@
               <span class="text-danger">
            
                 @error('surname')
-                  {{$message}}
+                  <b>*</b>
                 @enderror
 
               </span>         
@@ -67,7 +67,7 @@
               <span class="text-danger">
            
                 @error('birthday')
-                  {{$message}}
+                  <b>*</b>
                 @enderror
 
               </span>         

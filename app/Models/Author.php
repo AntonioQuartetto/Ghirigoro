@@ -14,5 +14,4 @@ class Author extends Model
     protected $casts = [
         'birthday' => 'datetime'
     ];
-    
 }

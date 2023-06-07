@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AuthorRequest;
 use App\Models\Author;
-use App\Http\Requests\StoreAuthorRequest;
-use App\Http\Requests\UpdateAuthorRequest;
+
 
 class AuthorController extends Controller
 {
@@ -31,7 +31,7 @@ class AuthorController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreAuthorRequest $request)
+    public function store(AuthorRequest $request)
     {
         Author::create([
             'name' => $request->name,
@@ -55,15 +55,21 @@ class AuthorController extends Controller
      */
     public function edit(Author $author)
     {
-        //
+        return view('authors.edit', compact('author'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateAuthorRequest $request, Author $author)
+    public function update(AuthorRequest $request, Author $author)
     {
-        //
+        $author->update([
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'birthday' => $request->birthday
+        ]);
+
+        return redirect()->route('authors.index')->with('success', 'Modifica avvenuta con successo');
     }
 
     /**
@@ -71,6 +77,8 @@ class AuthorController extends Controller
      */
     public function destroy(Author $author)
     {
-        //
+        $author->delete();
+
+        return redirect()->route('authors.index')->with('success', 'Autore eliminato con successo');
     }
 }
