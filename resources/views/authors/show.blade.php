@@ -18,7 +18,7 @@
       <ul>
       <li><b>Nome: </b>{{$author->name}}</li>
       <li><b>Cognome: </b>{{$author->surname}} </li>
-      <li><b>Anno di Nascita: </b>{{$author->birthday}}</li>
+      <li><b>Anno di Nascita: </b>{{$author->birthday->format('d-m-Y')}}</li>
 
         <ul>
           @forelse($author->books as $book)
