@@ -8,6 +8,13 @@ use App\Models\Book;
 
 class AuthorController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth')->except('homepage','index', 'show');
+    }
+
+
+
     /**
      * Display a listing of the resource.
      */
