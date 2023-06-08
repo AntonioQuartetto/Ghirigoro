@@ -66,13 +66,24 @@
               <div class="col-6 mb-3">
               <b><span class="text-danger">
             
-                  @error('author')
+                  @error('author_id')
                     *
                   @enderror
 
                 </span></b>
               <label class="form-label"><b>Autore:</b></label>
-                <input class="input-custom" type="text" name="author" value="{{ old('author') }}" placeholder="Autore"/> 
+
+                  <select class="input-custom" name="author_id" id="author_id">
+                  
+                    @foreach ($authors as $author)
+                      <option value="{{$author->id}}">
+                        {{$author->name}} {{$author->surname}}
+                      </option>  
+                    @endforeach
+                    
+                  </select>
+
+                {{-- <input class="input-custom" type="text" name="author_id" value="{{ old('author') }}" placeholder="Autore"/>  --}}
               </div>
 
               <!-- Year Input -->

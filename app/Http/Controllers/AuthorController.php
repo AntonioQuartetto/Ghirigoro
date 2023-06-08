@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\AuthorRequest;
 use App\Models\Author;
-
+use App\Models\Book;
 
 class AuthorController extends Controller
 {
@@ -46,8 +46,11 @@ class AuthorController extends Controller
      * Display the specified resource.
      */
     public function show(Author $author)
-    {
-        return view('authors.show', compact('author'));
+    {   
+
+        $books = Book::all();
+
+        return view('authors.show', compact('author', 'books'));
     }
 
     /**

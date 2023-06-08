@@ -19,6 +19,18 @@
       <li><b>Nome: </b>{{$author->name}}</li>
       <li><b>Cognome: </b>{{$author->surname}} </li>
       <li><b>Anno di Nascita: </b>{{$author->birthday}}</li>
+
+        <ul>
+          @forelse($author->books as $book)
+
+            <li>{{$book->title}}</li>
+
+          @empty
+
+          Nessun Libro Aggiunto
+
+          @endforelse
+        </ul>
       </ul>
     </div>
 

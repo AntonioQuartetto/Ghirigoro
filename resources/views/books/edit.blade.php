@@ -72,7 +72,17 @@
 
                 </span></b>
               <label class="form-label"><b>Autore:</b></label>
-                <input class="input-custom" type="text" name="author" value="{{$book->author}}" placeholder="Autore"/> 
+                 <select class="input-custom" name="author_id" id="author_id">
+
+                  
+                    @foreach ($authors as $author)
+                      <option @if ($book->author_id == $author->id) selected @endif
+                       value="{{$author->id}}">
+                        {{$author->name}} {{$author->surname}}
+                      </option>  
+                    @endforeach
+                    
+                  </select>
               </div>
 
               <!-- Year Input -->

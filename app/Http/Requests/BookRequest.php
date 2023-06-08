@@ -24,7 +24,7 @@ class BookRequest extends FormRequest
         return [
             'title' => 'required|string',
             'pages' => 'required|integer',
-            'author' => 'required|string',
+            'author_id' => 'required',
             'year' => 'required|integer',
             'image' => "mimes:png,jpg"
         ];
@@ -36,8 +36,7 @@ class BookRequest extends FormRequest
             'title.string' => 'Consentite solo lettere',
             'pages.required' => 'Numero delle pagine obbligatorio',
             'pages.integer' => 'Consentiti solo numeri',
-            'author.required' => 'Autore Obbligatorio',
-            'author.string' => 'Consentite solo lettere',
+            'author_id.required' => 'Autore Obbligatorio',
             'year.required' => 'Anno obbligatorio',
             'year.integer' => 'Consentiti solo numeri',
             'image.mimes' => 'Consentiti solo questi formati'
