@@ -37,8 +37,12 @@
               </div>
                
 
-              <div class="d-grid">
-                <button class="btn-user fw-bold" type="submit">Accedi</button>
+              <div class="d-grid my-3">
+                <button class="btn-user fw-bold py-2" type="submit">Accedi</button>
+              </div>
+              <div class="d-grid my-2">
+                Non sei registrato?
+                <a href="{{route('register')}}" class="btn-user fw-bold py-2 text-center" type="submit">Registrati</a>
               </div>
 
             </form>

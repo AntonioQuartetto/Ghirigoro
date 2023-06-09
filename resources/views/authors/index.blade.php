@@ -9,10 +9,10 @@
   <div class="section-custom">
   
 
-        <div class="my-3 text-center">
+        <div class="d-flex justify-content-between  mx-2 my-4 p-4">
 
             <h3>Lista Autori</h3>
-            <span> <a class="btn btn-success" href="{{route('authors.create')}}">Add Author</a></span>
+            <span> <a class="btn btn-success" href="{{route('authors.create')}}">Aggiungi Autore</a></span>
 
         </div>
 

@@ -8,11 +8,12 @@
   <div class="section-custom">
   
 
-        <div class="my-3 text-center">
+        <div class="d-flex justify-content-between  mx-2 my-4 p-4">
 
             <h3>Lista Libri</h3>
-            <span> <a class="btn btn-success" href="{{route('books.create')}}">Add Book</a></span>
 
+            <span> <a class="btn btn-success" href="{{route('books.create')}}">Aggiungi Libro</a></span>
+            
         </div>
 
             @if (session('success')) 

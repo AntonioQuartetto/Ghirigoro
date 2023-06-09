@@ -10,6 +10,7 @@ animation: notfound .8s normal forwards ease-out;
 animation-delay: .7s;
 z-index: 99;
 text-align: center;
+margin-top: 15px;
 }
 
 .notfound h1 {

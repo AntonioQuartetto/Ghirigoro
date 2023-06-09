@@ -7,10 +7,10 @@
 
     <div class="section-custom">
     
-        <div class="my-3 text-center">
+        <div class="d-flex justify-content-between  mx-2 my-4 p-4">
         
             <h2>Lista Categorie</h2>
-            <span> <a class="btn btn-success" href="{{route('category.create')}}">Add Category</a></span>
+            <span> <a class="btn btn-success" href="{{route('category.create')}}">Aggiungi Categoria</a></span>
         
         </div>
 

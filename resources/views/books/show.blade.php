@@ -13,7 +13,7 @@
   <div class="row">
 
     <div class="col-12 col-sm-6">
-      <img class="w-75" src="{{empty($book->image) ? Storage::url('/images/placeholder/placeholder-book.png') : Storage::url($book->image)}}" alt="{{$book->name}}">
+      <img class="w-50 ms-5 rounded" src="{{empty($book->image) ? Storage::url('/images/placeholder/placeholder-book.png') : Storage::url($book->image)}}" alt="{{$book->name}}">
     </div>
     
     <div class="col-12 col-sm-6">
