@@ -6,6 +6,7 @@ use App\Http\Requests\BookRequest;
 use App\Models\Author;
 use App\Models\Book;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BookController extends Controller
 {
@@ -52,7 +53,8 @@ class BookController extends Controller
             'pages' => $request->pages,
             'author_id' => $request->author_id,
             'year' => $request->year,
-            'image' => $path_image
+            'image' => $path_image,
+            'user_id' => Auth::user()->id
         ]);
         
         return redirect()->route('books.index')->with('success', 'Libro aggiunto con successo');

@@ -27,7 +27,7 @@
             {{-- Input Name  --}}
             <div class="d-flex flex-row align-items-center mb-4">
                 <div class="form-outline flex-fill mb-0">
-                <input type="text" name="name" id="name" class="form-control">
+                <input type="text" name="name" id="name" class="form-control" value="{{old('name')}}">
                 <label class="form-label" for="name">Nome e Cognome</label>
                 <div class="form-notch"><div class="form-notch-leading"></div><div class="form-notch-middle"></div><div class="form-notch-trailing"></div></div></div>
                 @error('name') <span class="small text-danger">{{ $message }}</span> @enderror
