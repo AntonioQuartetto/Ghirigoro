@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 /*-- Homepage -- */
-Route::get('/', [BookController::class, 'homepage'])->name('homepage');
+Route::get('/', [PageController::class, 'homepage'])->name('homepage');
 
 /*-- Book Routes ---*/ 
 
