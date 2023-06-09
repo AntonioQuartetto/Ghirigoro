@@ -2,7 +2,9 @@
 
 /*--- INPUT CUSTOM ---*/
 .input-custom{
-    
+    padding: 5px;
+    box-shadow: rgb(0, 11, 108) -1px 1px 5px 1px;
     border-radius: 5px;
+    border: solid 1px  rgb(53, 0, 67);
 
 }

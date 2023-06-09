@@ -75,6 +75,10 @@
 
                   <select class="input-custom" name="author_id" id="author_id">
                   
+                      <option>
+                        Seleziona Autore
+                      </option> 
+
                     @foreach ($authors as $author)
                       <option value="{{$author->id}}">
                         {{$author->name}} {{$author->surname}}
