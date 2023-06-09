@@ -63,7 +63,7 @@
                <!-- Birthday Input -->
             <div class="col-6  mb-3">
               <label class="form-label"><b>Data di Nascita: </b></label>
-              <input class="input-custom" type="date" name="birthday" value="{{ $author->birthday }}" placeholder="Data di Nascita"/>  
+              <input class="input-custom" type="date" name="birthday" value="{{ $author->birthday->format('Y-m-d') }}" placeholder="Data di Nascita"/>  
               <span class="text-danger">
            
                 @error('birthday')
