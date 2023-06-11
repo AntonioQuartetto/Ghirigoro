@@ -1,5 +1,4 @@
 
-
 <x-main>
 
     <x-slot name="title">Library</x-slot>
@@ -25,6 +24,7 @@
             <ul>
                 
                 @foreach ($books as $book)
+                
 
                 <li class="list-group-item d-flex justify-content-between ">
                     <div>

@@ -6,9 +6,9 @@
 
 <div class="my-5 text-white">
 
-    <div class="text-center">
-      <h2 class="my-5">Dettagli</h2>
-    </div>
+  <div class="text-center">
+    <h2 class="my-5">Dettagli</h2>
+  </div>
   
   <div class="row">
 
@@ -23,9 +23,9 @@
       <li><b>Num.Pagine: </b>{{$book->pages}}</li>
       <li><b>Anno: </b>{{$book->year}} </li>
       </ul>
+      <hr>
+      <p>Creato da: <b>{{ $book->user->name ?? 'Anonimo' }}</b></p>
     </div>
-
-
 
   </div>
 
