@@ -19,7 +19,7 @@
     </div>
 
 
-    <?xml version="1.0" encoding="utf-8"?>
+
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1700 1400" style="enable-background:new 0 0 1700 1400; width: 800px;"
       xml:space="preserve">
       <g>

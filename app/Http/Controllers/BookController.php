@@ -66,6 +66,10 @@ class BookController extends Controller
 
     public function edit(Book $book){
 
+        if(!(Auth::user()->id == $book->user_id)){
+            abort(401);
+        };
+
         $authors = Author::all();
 
         return view('books.edit', compact('book', 'authors'));
