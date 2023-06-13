@@ -1,0 +1,19 @@
+
+
+.unauthorized-custom{
+    border-radius: 10px;
+    opacity: 80%;
+}
+
+.btn-401-error {
+    text-decoration: none;
+    background-color: rgb(53, 0, 67);
+    color: wheat;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn-401-error:hover{
+    box-shadow: red -1px 1px 10px 5px;
+    color: red;
+}
