@@ -103,6 +103,41 @@
                 <input class="input-custom" type="text" name="year" value="{{ old('year') }}" placeholder="Anno"/> 
               </div>
 
+              <!-- Category -->
+
+
+            
+              <div class="col-6 mb-3">
+
+                 @foreach ($categories as $category)
+                  <div class="form-check">
+                   
+                      <b>
+                        <span class="text-danger">
+              
+                        @error('year')
+                          *
+                        @enderror
+
+                        </span>
+                      </b>
+
+                      <input class="form-check-input" 
+                      type="checkbox" name="categories[]" 
+                      value="{{$category->id}}" 
+                      id="category_id"/>
+                     
+                      <label class="form-check-label" for="category_id"><b>{{$category->name}}</b></label>
+                
+                  </div>
+                  @endforeach
+
+              </div>
+            
+
+
+
+
                 <!-- File Input -->
               <div class="col-6 mb-3">
               <b><span class="text-danger">

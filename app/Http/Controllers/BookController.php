@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\BookRequest;
 use App\Models\Author;
 use App\Models\Book;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,8 +39,9 @@ class BookController extends Controller
     public function create(){
 
         $authors = Author::all();
+        $categories = Category::all();
 
-        return view('books.create', compact('authors'));
+        return view('books.create', compact('authors', 'categories'));
     }
     
     
@@ -54,7 +56,7 @@ class BookController extends Controller
             $path_image = $request->file('image')->storeAs('public/images/cover', $path_name);
         }
         
-        Book::create([
+       $data = Book::create([
             'title' => $request->title,
             'pages' => $request->pages,
             'author_id' => $request->author_id,
@@ -62,6 +64,8 @@ class BookController extends Controller
             'image' => $path_image,
             'user_id' => Auth::user()->id
         ]);
+
+        $data->categories()->attach($request->categories);
         
         return redirect()->route('books.index')->with('success', 'Libro aggiunto con successo');
         
@@ -79,6 +83,7 @@ class BookController extends Controller
         };
 
         $authors = Author::all();
+       
 
         return view('books.edit', compact('book', 'authors'));
     }
@@ -101,11 +106,14 @@ class BookController extends Controller
             'year' => $request->year,
             'image' => $path_image
         ]);
+
+        $book->categories()->sync($request->categories);
         
         return redirect()->route('books.index')->with('success', 'Modifica avvenuta con successo');
     }
      public function destroy(Book $book){
 
+        $book->categories()->detach();
         $book->delete();
 
         return redirect()->route('books.index')->with('success', 'Libro eliminato con successo');

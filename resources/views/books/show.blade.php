@@ -22,6 +22,18 @@
       <li><b>Autore: </b>{{$book->author->name}} {{$book->author->surname}}</li>
       <li><b>Num.Pagine: </b>{{$book->pages}}</li>
       <li><b>Anno: </b>{{$book->year}} </li>
+      <li><b>Categoria: </b>
+          <ul>
+            @forelse ($book->categories as $category)
+               <li>{{$category->name}} </li>
+            @empty
+            Nessuna Categoria
+            @endforelse
+             
+           
+          </ul>
+          
+      </li>
       </ul>
       <hr>
       <p>Creato da: <b>{{ $book->user->name ?? 'Anonimo' }}</b></p>
