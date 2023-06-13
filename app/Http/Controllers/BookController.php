@@ -83,9 +83,9 @@ class BookController extends Controller
         };
 
         $authors = Author::all();
-       
+        $categories = Category::all();
 
-        return view('books.edit', compact('book', 'authors'));
+        return view('books.edit', compact('book', 'authors', 'categories'));
     }
 
     public function update(BookRequest $request, Book $book){
