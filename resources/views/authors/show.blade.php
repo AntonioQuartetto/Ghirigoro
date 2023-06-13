@@ -20,7 +20,8 @@
       <li><b>Cognome: </b>{{$author->surname}} </li>
       <li><b>Anno di Nascita: </b>{{$author->birthday->format('d-m-Y')}}</li>
       <li><b>Età: </b>{{$author->birthday->diffForHumans()}}</li>
-        <ul>
+      <li><b>Libri Scritti:</b>
+         <ul>
           @forelse($author->books as $book)
 
             <li>{{$book->title}}</li>
@@ -31,7 +32,12 @@
 
           @endforelse
         </ul>
+      
+      </li>
+       
       </ul>
+      <hr>
+      <p>Aggiunto da: <b>{{ $book->user->name ?? 'Anonimo' }}</b></p>
     </div>
 
 
