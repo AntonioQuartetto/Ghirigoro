@@ -75,7 +75,7 @@
 
                   <select class="input-custom" name="author_id" id="author_id">
                   
-                      <option>
+                      <option value="" disabled selected>
                         Seleziona Autore
                       </option> 
 
@@ -87,7 +87,7 @@
                     
                   </select>
 
-                {{-- <input class="input-custom" type="text" name="author_id" value="{{ old('author') }}" placeholder="Autore"/>  --}}
+                
               </div>
 
               <!-- Year Input -->
@@ -104,10 +104,10 @@
               </div>
 
               <!-- Category -->
-
-
             
               <div class="col-6 mb-3">
+                
+                <span><b>Categorie:</b></span>
 
                  @foreach ($categories as $category)
                   <div class="form-check">
@@ -115,7 +115,7 @@
                       <b>
                         <span class="text-danger">
               
-                        @error('year')
+                        @error('categories')
                           *
                         @enderror
 

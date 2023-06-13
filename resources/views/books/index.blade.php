@@ -41,15 +41,7 @@
                     <span>
                         <a href="{{route('books.edit', ['book' => $book->id])}}" type="button" class="btn-list">Modifica</a>
                     </span>
-                    <span>
-
-                        <a class="btn-list" onclick="event.preventDefault(); document.querySelector('#form-delete-{{$book->id}}').submit();">Elimina</a>
-                        <form class="d-none" id="form-delete-{{$book->id}}" action="{{route('books.destroy', ['book' => $book->id])}}" method="POST">
-                        @method('DELETE')
-                        @csrf
-                        </form>
-
-                    </span>
+                  
 
                     @endauth
 

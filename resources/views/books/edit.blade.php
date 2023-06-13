@@ -102,6 +102,8 @@
 
               <div class="col-6 mb-3">
 
+                <span><b>Categorie:</b></span>
+
                  @foreach ($categories as $category)
                   <div class="form-check">
                    
@@ -152,11 +154,22 @@
                 
 
               <!-- Submit button -->
-              <div class="d-grid">
-                <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Salva</button>
+              <div class="d-grid my-3">
+                <button class="btn-list btn-lg" id="submitButton" type="submit">Salva</button>
               </div>
             </form>
+
+              <!-- Delete Button -->
+            <div class="d-grid text-center">
+            
+              <a class="btn-list btn-lg" onclick="event.preventDefault(); document.querySelector('#form-delete-{{$book->id}}').submit();">Elimina</a>
+              <form class="d-none" id="form-delete-{{$book->id}}" action="{{route('books.destroy', ['book' => $book->id])}}" method="POST">
+              @method('DELETE')
+              @csrf
+              </form>
+
       
+            </div>
 
           </div>
         </div>

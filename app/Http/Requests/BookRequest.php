@@ -39,7 +39,7 @@ class BookRequest extends FormRequest
             'author_id.required' => 'Autore Obbligatorio',
             'year.required' => 'Anno obbligatorio',
             'year.integer' => 'Consentiti solo numeri',
-            'image.mimes' => 'Consentiti solo questi formati'
+            'image.mimes' => 'Consentiti solo questi formati: png,jpg'
         ];
     }
 }
