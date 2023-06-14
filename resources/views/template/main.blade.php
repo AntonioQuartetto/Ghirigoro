@@ -12,19 +12,21 @@
     </head>
     <body class="body-custom">
         
-    <!-- navbar -->
-    <x-navbar />
-
-    <!-- header-logo -->
-    
-    <div class="header-custom">
-    <img src="{{Storage::url('/images/logo/header-logo.png')}}">
-    </div>
+   
 
 
 
     <!-- contenuto pagina -->
     <main class="container my-5 min-vh-100">
+
+        <!-- navbar -->
+        <x-navbar />
+
+        <!-- header-logo -->
+        
+        <div class="header-custom">
+         <img class="img-fluid" src="{{Storage::url('/images/logo/header-logo.png')}}">
+        </div>
 
         {{$slot}}
 

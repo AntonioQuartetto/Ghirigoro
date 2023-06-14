@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark p-3">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand text-warning" href="{{route('homepage')}}">
       <img class ="px-3" src="{{Storage::url('/images/logo/hogwarts-logo.png')}}" alt="Logo">
