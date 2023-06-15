@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 /*-- Homepage -- */
 Route::get('/', [PageController::class, 'homepage'])->name('homepage');
+Route::post('/search', [PageController::class, 'search'])->name('search');
 
 /*-- Book Routes ---*/ 
 
@@ -43,8 +44,7 @@ Route::resource('books', BookController::class);
 // Route::put('/categorie/{category}', [CategoryController::class, 'update'])->name('category.update');
 // Route::delete('/categorie/{category}', [CategoryController::class, 'destroy'])->name('category.delete');
 
-
- Route::resource('category', CategoryController::class); 
+Route::resource('category', CategoryController::class); 
 
 /*-- Authors Routes --*/
 

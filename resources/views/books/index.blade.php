@@ -12,6 +12,17 @@
             <h3>Lista Libri</h3>
 
             <span> <a class="btn btn-success" href="{{route('books.create')}}">Aggiungi Libro</a></span>
+
+            <span>
+            
+                <form action="{{ route('search') }}" method="POST" class="d-flex" role="search">
+                    @method("POST")
+                    @csrf
+                    <input name="search" class="form-control me-2" type="search" placeholder="Cerca un Libro" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Cerca</button>
+                </form>
+
+            </span>
             
         </div>
 
@@ -50,6 +61,7 @@
 
                    </div>
                 </li>
+
                     
                 @endforeach
 
