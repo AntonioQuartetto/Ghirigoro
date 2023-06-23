@@ -8,6 +8,7 @@
             <div class="col-12 col-lg-6 text-center p-3">
                 <img class="w-100 rounded" src="{{Storage::url('images/images-general/ghirigoro.jpg')}}" alt="Libreria">
             </div>
+
             <div class="col-12 col-sm-6 text-center p-3">
                 <h3>Descrizione</h3>
                 <p>

@@ -27,7 +27,7 @@
         <div class="header-custom">
          <img class="img-fluid" src="{{Storage::url('/images/logo/header-logo.png')}}">
         </div>
-
+        <x-maintenance />
         {{$slot}}
 
     </main>
